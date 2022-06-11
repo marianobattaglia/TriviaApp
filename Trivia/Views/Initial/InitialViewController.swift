@@ -16,6 +16,8 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        self.hideKeyboardWhenTappedAround()
+        self.userTextField.delegate = self
     }
     
     func setupUI() {

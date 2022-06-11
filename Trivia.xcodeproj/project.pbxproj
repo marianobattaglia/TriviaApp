@@ -29,6 +29,7 @@
 		45D106BF2844FE09004C8FD0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D106BE2844FE09004C8FD0 /* Model.swift */; };
 		69B62CE6DC480726C78CA6BF /* Pods_Trivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A65378CB2170487C1EBF6D0 /* Pods_Trivia.framework */; };
 		8731BAB928551AE500F9734A /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8731BAB828551AE500F9734A /* ViewController+Extensions.swift */; };
+		8731BABD2855468B00F9734A /* InitialViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8731BABC2855468B00F9734A /* InitialViewController+Extensions.swift */; };
 		F262B3D1E3AA12D9E2B22931 /* Pods_TriviaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1969AFE6CA41DCBE8FE15499 /* Pods_TriviaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		45D106BE2844FE09004C8FD0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6F037806139C80E289B92844 /* Pods-Trivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trivia.release.xcconfig"; path = "Target Support Files/Pods-Trivia/Pods-Trivia.release.xcconfig"; sourceTree = "<group>"; };
 		8731BAB828551AE500F9734A /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		8731BABC2855468B00F9734A /* InitialViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InitialViewController+Extensions.swift"; sourceTree = "<group>"; };
 		8A65378CB2170487C1EBF6D0 /* Pods_Trivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56F3A166BCFFB332B9C4D1C /* Pods-TriviaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriviaTests.release.xcconfig"; path = "Target Support Files/Pods-TriviaTests/Pods-TriviaTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD024F22713DC971A0AFD307 /* Pods-Trivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trivia.debug.xcconfig"; path = "Target Support Files/Pods-Trivia/Pods-Trivia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				8731BAB828551AE500F9734A /* ViewController+Extensions.swift */,
+				8731BABC2855468B00F9734A /* InitialViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				4538659A2847A9C300331D22 /* QuestionsService.swift in Sources */,
 				45CC491F28456E8700608278 /* InformationViewController.swift in Sources */,
 				451DD395284592950081CBD9 /* TabBarController.swift in Sources */,
+				8731BABD2855468B00F9734A /* InitialViewController+Extensions.swift in Sources */,
 				453D52072846E5350036BF84 /* AlamofireAPIClient.swift in Sources */,
 				8731BAB928551AE500F9734A /* ViewController+Extensions.swift in Sources */,
 				458540BD2842DECC00B40EEF /* AppDelegate.swift in Sources */,
@@ -584,6 +588,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,6 +619,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

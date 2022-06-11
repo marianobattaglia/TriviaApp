@@ -49,7 +49,7 @@
                                         <constraint firstAttribute="height" constant="34" id="Xcp-MS-bsg"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
                                 </textField>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alkemy-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-MO-G6C">
                                     <rect key="frame" x="121" y="8" width="132" height="132"/>
