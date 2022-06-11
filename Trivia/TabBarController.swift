@@ -39,8 +39,5 @@ class TabBarController: UITabBarController {
         secondNavigationViewController.tabBarItem = UITabBarItem(title: secondTabTitle, image: secondTabImage, selectedImage: nil)
 
         viewControllers = [secondNavigationViewController, firstNavigationViewController]
-        
-        //viewControllers?.append(firstNavigationViewController)
-        //viewControllers?.append(secondNavigationViewController)
     }
 }

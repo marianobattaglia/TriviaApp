@@ -11,7 +11,7 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
-    
+    @IBOutlet weak var scoreLabel: UILabel!
     
     private let questions = Contenido.shared.obtenerPreguntas()
     private var currentQuestionIndex = 0
@@ -22,14 +22,13 @@ class QuestionViewController: UIViewController {
     public var categoryID = 0
     let userDefaults = UserDefaults()
     
+    public var score: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setCurrentQuestion(for: currentQuestionIndex)
         getQuestion()
         
         categoryLabel.text = currentQuestion?.category
-        
-        
     }
 
     // MARK: Buttons:
@@ -58,7 +57,7 @@ class QuestionViewController: UIViewController {
     func getQuestion() {
         getQuestionService(for: categoryID) { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.setCurrentQuestion() //asdasd
+            strongSelf.setCurrentQuestion()
         }
     }
         
@@ -87,55 +86,28 @@ class QuestionViewController: UIViewController {
         return false
     }
     
-    //
-    
-//    private func updateQuestion() {
-//        currentQuestionIndex += 1
-//        setCurrentQuestion(for: currentQuestionIndex)
-//    }
-//
-//    private func setCurrentQuestion(for index: Int) {
-//        if index < questions.count {
-//            questionLabel.text = questions[index].question
-//        } else {
-//            currentQuestionIndex = 0
-//            questionLabel.text = questions[currentQuestionIndex].question
-//        }
-//    }
-//
-//    private func validateCurrentQuestion(answer: Bool) -> Bool {
-//        questions[currentQuestionIndex].answer == answer
-//    }
-    
     private func sendResultMessage(for result: Bool) {
-//        let message = result ? "La respuesta es correcta 🥳" : "La respuesta es incorrecta 😔"
-//        //print(message)
-//        let alert = UIAlertController(title: "Respuesta", message: message, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-//            self.updateQuestion()
-//        }))
-//        self.present(alert, animated: true, completion: nil)
-        
         result ? rightAnswerSelected() : wrongAnswerSelected()
     }
     
     private func rightAnswerSelected() {
-        let alertYES = UIAlertController(title: "Excellent!", message: "Good Job! 😁", preferredStyle: .alert)
+        let alertYES = UIAlertController(title: "Excellent!✅", message: "Good Job! 😁", preferredStyle: .alert)
         alertYES.addAction(UIAlertAction(title: "Thanks! 😎", style: .cancel, handler: { [self] _ in
+            score += 1
+            scoreLabel.text = String(score)
             getQuestion()
         }))
         self.present(alertYES, animated: true)
     }
     
     private func wrongAnswerSelected() {
-        let alertNO = UIAlertController(title: "Wrong!", message: "Better luck next time 😔", preferredStyle: .alert)
+        let alertNO = UIAlertController(title: "Wrong!❌", message: "Better luck next time 😔", preferredStyle: .alert)
         alertNO.addAction(UIAlertAction(title: "Ups! 😅", style: .cancel, handler: { [self] _ in
             getQuestion()
         }))
         self.present(alertNO, animated: true)
     }
         
-
 }
 
 

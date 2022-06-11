@@ -25,13 +25,6 @@ class CategoriesViewController: UIViewController {
         
         getCategories()
     }
-
-//    func getCategoriesService(completion: @escaping () -> Void) {
-//        service.getCategories { [weak self] categories in
-//            self?.categories = categories
-//            completion()
-//        }
-//    }
     
     func getCategories() {
         service.getCategories(completion: { [weak self] response in
@@ -51,7 +44,6 @@ class CategoriesViewController: UIViewController {
         
         navigationController?.pushViewController(questionsViewController, animated: true)
     }
-    
 }
 
 
@@ -60,10 +52,10 @@ extension CategoriesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
         let categoriesName = categories[indexPath.row].name
-
+        
         cell.textLabel?.text = categoriesName
+        cell.accessoryType = .disclosureIndicator
 
         return cell
         }
@@ -73,21 +65,17 @@ extension CategoriesViewController: UITableViewDataSource {
     }
 }
 
-
 extension CategoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Accion cuando toco una
         tableView.deselectRow(at: indexPath, animated: true)
         
         let categorySelected = categories[indexPath.row]
         
-        //asd
-        print("Celda seleccionada: \(categorySelected.name). id: \(categorySelected.id)")
+        print("Selected: \(categorySelected.name). id: \(categorySelected.id)")
         
-        QuestionViewController().categoryID = categorySelected.id
-        
-//        QuestionsService().getQuestions(for: categorySelected.id) { <#Question#> in
-//            <#code#>
-//        }
+        let vc = QuestionViewController()
+        vc.categoryID = categorySelected.id
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
