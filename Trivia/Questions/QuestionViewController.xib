@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryLabel" destination="xCs-Iu-YGD" id="hWI-X1-Zy7"/>
+                <outlet property="questionLabel" destination="ALM-kM-T8a" id="Wzp-rT-pbF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCs-Iu-YGD">
+                    <rect key="frame" x="134.5" y="44" width="259.5" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="YRJ-JV-FoS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALM-kM-T8a">
+                    <rect key="frame" x="20" y="141" width="374" height="520"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Loading questions...">
+                            <attributes>
+                                <font key="NSFont" metaFont="system" size="24"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8p-8r-J3z">
+                    <rect key="frame" x="20" y="666" width="160" height="160"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="90"/>
+                        <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="rightAnswerTapped:" destination="-1" eventType="touchUpInside" id="seo-Dt-1bt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GL-CL-42D">
+                    <rect key="frame" x="234" y="666" width="160" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="XiD-X2-40l"/>
+                        <constraint firstAttribute="width" constant="160" id="ZTS-7E-d3k"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="x.circle.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="90"/>
+                        <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="wrongAnswerTapped:" destination="-1" eventType="touchUpInside" id="xLY-Mb-1pD"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRr-wy-8Iq">
+                    <rect key="frame" x="20" y="44" width="106" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="5mh-zY-gEy"/>
+                        <constraint firstAttribute="width" constant="106" id="hRQ-F8-C3l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.89056521654129028" green="0.95983737707138062" blue="0.96923536062240601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xCs-Iu-YGD" firstAttribute="centerY" secondItem="aRr-wy-8Iq" secondAttribute="centerY" id="5WM-xT-DSH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6GL-CL-42D" secondAttribute="bottom" constant="36" id="AcO-1N-4iG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="X8p-8r-J3z" secondAttribute="bottom" constant="36" id="Cb9-aS-pQQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xCs-Iu-YGD" secondAttribute="trailing" constant="20" id="DCl-IF-Ngm"/>
+                <constraint firstItem="X8p-8r-J3z" firstAttribute="top" secondItem="ALM-kM-T8a" secondAttribute="bottom" constant="5" id="Kkz-sf-SAQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ALM-kM-T8a" secondAttribute="trailing" constant="20" id="LEV-HD-hRc"/>
+                <constraint firstItem="6GL-CL-42D" firstAttribute="centerY" secondItem="X8p-8r-J3z" secondAttribute="centerY" id="OQb-im-C2I"/>
+                <constraint firstItem="xCs-Iu-YGD" firstAttribute="leading" secondItem="aRr-wy-8Iq" secondAttribute="trailing" constant="8.5" id="U19-uV-TUD"/>
+                <constraint firstItem="aRr-wy-8Iq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="YuY-Yd-4ee"/>
+                <constraint firstItem="aRr-wy-8Iq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZZq-nt-gZy"/>
+                <constraint firstItem="ALM-kM-T8a" firstAttribute="top" secondItem="aRr-wy-8Iq" secondAttribute="bottom" constant="32" id="bN0-Xy-EcZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6GL-CL-42D" secondAttribute="trailing" constant="20" id="dWV-5d-JiE"/>
+                <constraint firstItem="ALM-kM-T8a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fka-RT-zR3"/>
+                <constraint firstItem="X8p-8r-J3z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="oMS-CF-pep"/>
+                <constraint firstItem="6GL-CL-42D" firstAttribute="leading" secondItem="X8p-8r-J3z" secondAttribute="trailing" constant="54" id="oc6-Vr-TCd"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="x.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

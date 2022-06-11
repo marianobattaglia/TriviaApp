@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationViewController" customModule="Trivia" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-Ot-dTE">
+                    <rect key="frame" x="360" y="44" width="34" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="7n6-oH-AFY"/>
+                        <constraint firstAttribute="width" constant="34" id="R5C-vw-am1"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="X"/>
+                    <connections>
+                        <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="tHE-Cc-ap6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Alkemy Trivia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ2-54-DRF">
+                    <rect key="frame" x="20" y="83" width="374" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="uUS-tt-TKV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alkemy-svg" translatesAutoresizingMaskIntoConstraints="NO" id="xP0-es-U9X">
+                    <rect key="frame" x="87" y="140" width="240" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="4r1-yT-FHq"/>
+                        <constraint firstAttribute="width" constant="240" id="MRq-W6-phJ"/>
+                        <constraint firstAttribute="height" constant="61" id="keK-ps-HCe"/>
+                    </constraints>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osx-68-Jft">
+                    <rect key="frame" x="20" y="229" width="374" height="633"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwu-zx-sV3" userLabel="View 2">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="633"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzR-cR-a9U">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="633"/>
+                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="uzR-cR-a9U" secondAttribute="trailing" id="MZO-c5-91A"/>
+                                <constraint firstAttribute="bottom" secondItem="uzR-cR-a9U" secondAttribute="bottom" id="b7b-A2-qNh"/>
+                                <constraint firstItem="uzR-cR-a9U" firstAttribute="leading" secondItem="wwu-zx-sV3" secondAttribute="leading" id="jDd-5q-3dP"/>
+                                <constraint firstItem="uzR-cR-a9U" firstAttribute="top" secondItem="wwu-zx-sV3" secondAttribute="top" id="p1I-RD-14z"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.78851127624511719" green="0.9455903172492981" blue="0.94470375776290894" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="wwu-zx-sV3" secondAttribute="trailing" id="2zj-EY-mH6"/>
+                        <constraint firstAttribute="bottom" secondItem="wwu-zx-sV3" secondAttribute="bottom" id="5eC-Zp-IZf"/>
+                        <constraint firstItem="wwu-zx-sV3" firstAttribute="leading" secondItem="Osx-68-Jft" secondAttribute="leading" id="HHN-DW-rL8"/>
+                        <constraint firstItem="wwu-zx-sV3" firstAttribute="bottom" secondItem="bGu-5I-Yle" secondAttribute="bottom" id="HwV-o1-VAt"/>
+                        <constraint firstItem="wwu-zx-sV3" firstAttribute="top" secondItem="Osx-68-Jft" secondAttribute="top" id="JGj-Qf-QDN"/>
+                        <constraint firstItem="wwu-zx-sV3" firstAttribute="centerX" secondItem="Osx-68-Jft" secondAttribute="centerX" id="K0O-gj-SIv"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="JVO-LK-tGk"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="bGu-5I-Yle"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AZ2-54-DRF" firstAttribute="top" secondItem="MFv-Ot-dTE" secondAttribute="bottom" constant="8" symbolic="YES" id="5Ii-75-WZW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Osx-68-Jft" secondAttribute="trailing" constant="20" id="7Dj-rP-Ltr"/>
+                <constraint firstItem="Osx-68-Jft" firstAttribute="top" secondItem="xP0-es-U9X" secondAttribute="bottom" constant="28" id="E7D-4T-2HN"/>
+                <constraint firstItem="xP0-es-U9X" firstAttribute="top" secondItem="AZ2-54-DRF" secondAttribute="bottom" constant="8" symbolic="YES" id="Ghn-K5-d0O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MFv-Ot-dTE" secondAttribute="trailing" constant="20" id="H2K-cs-ksD"/>
+                <constraint firstItem="Osx-68-Jft" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="H4w-KK-4iX"/>
+                <constraint firstItem="Osx-68-Jft" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="NE5-4A-DFP"/>
+                <constraint firstItem="MFv-Ot-dTE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OUa-T1-gEL"/>
+                <constraint firstItem="xP0-es-U9X" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Srf-dc-WgF"/>
+                <constraint firstItem="xP0-es-U9X" firstAttribute="top" secondItem="AZ2-54-DRF" secondAttribute="bottom" constant="8" symbolic="YES" id="Sxp-dg-AaK"/>
+                <constraint firstItem="Osx-68-Jft" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y9J-xz-nFY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AZ2-54-DRF" secondAttribute="trailing" constant="20" id="evh-Lq-e6e"/>
+                <constraint firstItem="AZ2-54-DRF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hId-Bz-vU8"/>
+                <constraint firstItem="AZ2-54-DRF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yvs-KL-9JJ"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alkemy-svg" width="117" height="25"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
